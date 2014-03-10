@@ -321,6 +321,7 @@ public abstract class AbstractSlideExpandableListAdapter extends WrapperListAdap
 
 			@Override
 			public void onAnimationEnd(Animation animation) {
+/*
 				if (type == ExpandCollapseAnimation.EXPAND) {
 					if (parent instanceof ListView) {
 						ListView listView = (ListView) parent;
@@ -340,6 +341,7 @@ public abstract class AbstractSlideExpandableListAdapter extends WrapperListAdap
 						}
 					}
 				}
+*/
 
 			}
 		});
