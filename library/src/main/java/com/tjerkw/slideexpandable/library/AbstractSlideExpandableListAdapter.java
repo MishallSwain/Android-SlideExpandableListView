@@ -1,7 +1,5 @@
 package com.tjerkw.slideexpandable.library;
 
-import java.util.BitSet;
-import android.graphics.Rect;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.SparseIntArray;
@@ -9,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
-import android.widget.LinearLayout;
 import android.widget.ListAdapter;
-import android.widget.ListView;
+
+import java.util.BitSet;
 
 /**
  * Wraps a ListAdapter to give it expandable list view functionality.
@@ -289,7 +287,7 @@ public abstract class AbstractSlideExpandableListAdapter extends WrapperListAdap
 
 	private void updateExpandable(View target, int position) {
 
-		final LinearLayout.LayoutParams params = (LinearLayout.LayoutParams)target.getLayoutParams();
+		final ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams)target.getLayoutParams();
 		if(openItems.get(position)) {
 			target.setVisibility(View.VISIBLE);
 			params.bottomMargin = 0;
