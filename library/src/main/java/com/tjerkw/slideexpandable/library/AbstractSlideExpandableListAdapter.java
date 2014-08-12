@@ -228,6 +228,7 @@ public abstract class AbstractSlideExpandableListAdapter extends WrapperListAdap
 		button.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(final View view) {
+                if (!isEnabled(position)) return;
 
 				Animation a = target.getAnimation();
 
